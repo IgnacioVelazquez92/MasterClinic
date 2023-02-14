@@ -1,6 +1,6 @@
 {
   "employees": [
-  {"id":1,"name":"EDUARDO","lastName":"COMOTTI","specialty":"CARDIOLOGIA","mail":"EDUARDO.COMOTTI@GMAIL.COM","pass":"pruebaid1"},
+  {"id":1,"name":"MASTER","lastName":"CLINIC","specialty":"ADMINISTRADOR","mail":"MASTER.CLINIC@GMAIL.COM","pass":"pruebaid1","deleted":false},
   {"id":2,"name":"JORGE","lastName":"SUAREZ","specialty":"CARDIOLOGIA","mail":"JORGE.SUAREZ@GMAIL.COM","pass":"pruebaid2"},
   {"id":3,"name":"YOLANDA","lastName":"RODRIGUEZ","specialty":"CARDIOLOGIA","mail":"YOLANDA.RODRIGUEZ@GMAIL.COM","pass":"pruebaid3"},
   {"id":4,"name":"DANIELA","lastName":"LIONETTI","specialty":"CIRUGIA GENERAL","mail":"DANIELA.LIONETTI@GMAIL.COM","pass":"pruebaid4"},
@@ -10,7 +10,8 @@
   {"id":8,"name":"ANDREA","lastName":"ARCOS","specialty":"NEUROLOGIA","mail":"ANDREA.ARCOS@GMAIL.COM","pass":"pruebaid8"},
   {"id":9,"name":"CESAR","lastName":"BONILLA","specialty":"CLINICA MEDICA","mail":"CESAR.BONILLA@GMAIL.COM","pass":"pruebaid9"},
   {"id":10,"name":"CRISTINA","lastName":"MEDINA","specialty":"CLINICA MEDICA","mail":"CRISTINA.MEDINA@GMAIL.COM","pass":"pruebaid10"},
-  {"id":11,"name":"NORA","lastName":"ALVAREZ","specialty":"CLINICA MEDICA","mail":"NORA.ALVAREZ@GMAIL.COM","pass":"pruebaid11"}
+  {"id":11,"name":"NORA","lastName":"ALVAREZ","specialty":"CLINICA MEDICA","mail":"NORA.ALVAREZ@GMAIL.COM","pass":"pruebaid11"},
+  {"id":12,"name":"EDUARDO","lastName":"COMOTTI","specialty":"CARDIOLOGIA","mail":"EDUARDO.COMOTTI@GMAIL.COM","pass":"pruebaid1"}
   ],
   "comments": [
     {
