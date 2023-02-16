@@ -48,6 +48,8 @@ const urlTurnos = "http://localhost:3000/turns";
     }, false)
   })
 })()
+
+
 const registrarMedicos = () => {
   //Cargos la data de form a las variables
   const name = document.getElementById("nombre").value;
@@ -56,6 +58,9 @@ const registrarMedicos = () => {
   const mail = document.getElementById("correo").value;
   const pass = document.getElementById("password").value;
   const authorized=false;
+  
+  //falta chequear mail si ya se encuentra registrado
+
 
   //creo la esttuctura de datos que pasare al Json
   const medico = { name, lastName, specialty, mail, pass , authorized};
@@ -111,6 +116,32 @@ const obtenerDataMedicoPorEspecialidad = (especialidad) => {
 
       const medicosFiltrados = data.filter(medico => medico.specialty === especialidad);
       console.log(medicosFiltrados);
+    })
+    .catch((error) => {
+      console.error("Error al realizar la solicitud:", error);
+    });
+};
+
+const busquedaMail = (mail) => {
+  fetch(urlEmployees)
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("Error al obtener la lista de médicos");
+      }
+    })
+    .then((data) => {
+      // Código para procesar la lista de médicos obtenida
+
+      const medicosFiltrados = data.find(medico => medico.mail === mail);
+      if(medicosFiltrados){
+        
+        //retorna true por que encontro coincidencia del mail en la base de datos
+        return true
+      }else{
+        return false
+      }
     })
     .catch((error) => {
       console.error("Error al realizar la solicitud:", error);
