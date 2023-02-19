@@ -107,6 +107,87 @@
       "mail": "EDUARDO.COMOTTI@GMAIL.COM",
       "pass": "pruebaid12",
       "authorized": true
+    },
+    {
+      "name": "Alejandro",
+      "lastName": "Villarreal",
+      "specialty": "Cardiologia",
+      "mail": "ale@ale.com",
+      "pass": "1224",
+      "authorized": false,
+      "id": 13
+    },
+    {
+      "name": "Alejandro",
+      "lastName": "Villarreal",
+      "specialty": "Cardiologia",
+      "mail": "mazo@lll.com",
+      "pass": "1234",
+      "authorized": false,
+      "id": 14
+    },
+    {
+      "name": "Mazo",
+      "lastName": "Villarreal",
+      "specialty": "Cardiologia",
+      "mail": "Nacho@lll.com",
+      "pass": "1234",
+      "authorized": false,
+      "id": 15
+    },
+    {
+      "name": "Franco",
+      "lastName": "Valdez",
+      "specialty": "Ginecologia",
+      "mail": "franco@franco.com",
+      "pass": "12324",
+      "authorized": false,
+      "id": 16
+    },
+    {
+      "name": "PABLO",
+      "lastName": "FERNANDEZ",
+      "specialty": "CLINICA MEDICA",
+      "mail": "PABLO@PABLO.COM",
+      "pass": "1234",
+      "authorized": false,
+      "id": 17
+    },
+    {
+      "name": "ALE",
+      "lastName": "VEXLER",
+      "specialty": "CLINICA MEDICA",
+      "mail": "ALE.VEXLER.COM",
+      "pass": "1234",
+      "authorized": false,
+      "id": 18
+    },
+    {
+      "name": "",
+      "lastName": "",
+      "specialty": "",
+      "mail": "",
+      "pass": "",
+      "authorized": false,
+      "id": 19
+    },
+    {
+      "name": "ALE",
+      "lastName": "Villarreal",
+      "specialty": "CIRUGIA PLASTICA",
+      "mail": "ale@VILLARREAL.COM",
+      "pass": "1234",
+      "authorized": false,
+      "id": 20
+    },
+    {
+      "name": "NACHO",
+      "lastName": "NACHO",
+      "specialty": "CIRUGIA PLASTICA",
+      "mail": "NACHO@BACHO.COM",
+      "pass": "1234",
+      "authorized": false,
+      "id": 21
     }
   ],
   "patients": [
