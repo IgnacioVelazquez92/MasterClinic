@@ -23,6 +23,58 @@ const urlTurnos = "http://localhost:3000/turns";
 
 
 
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      } else {
+        registrarMedicos();
+        alert("registro exitoso")
+
+      }
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
+
+const registrarMedicos = () => {
+  //Cargos la data de form a las variables
+  const name = document.getElementById("nombre").value;
+  const lastName = document.getElementById("apellido").value;
+  const specialty = document.getElementById("especialidad").value;
+  const mail = document.getElementById("correo").value;
+  const pass = document.getElementById("password").value;
+  const authorized = false;
+
+  //falta chequear mail si ya se encuentra registrado
+
+
+  //creo la esttuctura de datos que pasare al Json
+  const medico = { name, lastName, specialty, mail, pass, authorized };
+
+  fetch(urlEmployees, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(medico),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      alert("Usuario registrado exitosamente");
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+};
 
 //Data Medicos por especialidad
 const obtenerMedicosPorEspecialidad = (Especialidad) => { };
