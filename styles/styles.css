@@ -3,5 +3,5 @@
 .fondoForm{
   background-image: url(/img/clinic.png);
   background-repeat: no-repeat;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }

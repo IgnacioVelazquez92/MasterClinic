@@ -36,14 +36,11 @@ const urlTurnos = "http://localhost:3000/turns";
       if (!form.checkValidity()) {
         event.preventDefault()
         event.stopPropagation()
-        // registrarMedicos()
-        
       }else {
         registrarMedicos();
         alert("registro exitoso")
         
       }
-
       form.classList.add('was-validated')
     }, false)
   })

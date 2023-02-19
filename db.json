@@ -7,7 +7,8 @@
       "specialty": "ADMINISTRADOR",
       "mail": "MASTER.CLINIC@GMAIL.COM",
       "pass": "pruebaid1",
-      "deleted": false
+      "authorized": true,
+      "isAdmin": true
     },
     {
       "id": 2,
@@ -107,6 +108,24 @@
       "mail": "EDUARDO.COMOTTI@GMAIL.COM",
       "pass": "pruebaid12",
       "authorized": true
+    },
+    {
+      "name": "OMAR",
+      "lastName": "VELAZQUEZ",
+      "specialty": "CARDIOLOGIA",
+      "mail": "IGNACIOV92@GMAIL.COM",
+      "pass": "123456",
+      "authorized": false,
+      "id": 13
+    },
+    {
+      "name": "ALEJANDRO",
+      "lastName": "VILLARREAL",
+      "specialty": "CARDIOLOGIA",
+      "mail": "ALEV@GMAIL.COM",
+      "pass": "123456",
+      "authorized": false,
+      "id": 14
     }
   ],
   "patients": [
