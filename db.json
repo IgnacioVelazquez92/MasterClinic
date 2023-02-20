@@ -112,10 +112,10 @@
     {
       "name": "OMAR",
       "lastName": "VELAZQUEZ",
-      "specialty": "CARDIOLOGIA",
+      "specialty": "NEUROLOGIA",
       "mail": "IGNACIOV92@GMAIL.COM",
       "pass": "123456",
-      "authorized": false,
+      "authorized": true,
       "id": 13
     },
     {

@@ -40,8 +40,8 @@ const imprimirPostulantes =async ()=>{
     <td class="text-center">${solicitante.specialty}</td>
     <td class="text-center">${solicitante.mail}</td>
     <th scope="col" class="text-center">
-      <button type="button" class="btn btn-success">Autorizar</button>
-      <button type="button" class="btn btn-danger">Denegar</button>
+      <button type="button" class="btn btn-success" onclick="validar(${solicitante.id})">Autorizar</button>
+      <button type="button" class="btn btn-danger" >Denegar</button>
     </th>
   </tr>
   `
@@ -75,7 +75,7 @@ const imprimirStaff =async ()=>{
     <td class="text-center">${medico.specialty}</td>
     <td class="text-center">${medico.mail}</td>
     <th scope="col" class="text-center">
-      <button type="button" class="btn btn-dark">Editar</button>
+      <button type="button" class="btn btn-dark" >Editar</button>
       <button type="button" class="btn btn-danger">Eliminar</button>
     </th>
   </tr>
@@ -83,3 +83,21 @@ const imprimirStaff =async ()=>{
 })
 }
 imprimirStaff()
+
+const validar = (id)=>{
+  const urlEdit= `http://localhost:3000/employees/${id}`
+  console.log(urlEdit)
+  const authorized=true;
+  const data={authorized};
+  console.log(data);
+  fetch(urlEdit, {
+    method: "PATCH",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json))
+    .catch((err)=>console.error(err));
+}
