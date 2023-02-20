@@ -71,7 +71,7 @@
       "specialty": "NEUROLOGIA",
       "mail": "ANDREA.ARCOS@GMAIL.COM",
       "pass": "pruebaid8",
-      "authorized": true
+      "authorized": false
     },
     {
       "id": 9,
@@ -80,7 +80,7 @@
       "specialty": "CLINICA MEDICA",
       "mail": "CESAR.BONILLA@GMAIL.COM",
       "pass": "pruebaid9",
-      "authorized": true
+      "authorized": false
     },
     {
       "id": 10,
@@ -124,178 +124,419 @@
       "specialty": "CARDIOLOGIA",
       "mail": "ALEV@GMAIL.COM",
       "pass": "123456",
-      "authorized": false,
+      "authorized": true,
       "id": 14
     }
   ],
   "patients": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "JUAN",
+      "lastName": "MANZUR",
+      "mail": "JUANM@GAMIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 2,
+      "name": "MARTINA",
+      "lastName": "JUAREZ",
+      "mail": "MARTINAJ@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 3,
+      "name": "MARIO",
+      "lastName": "AGUIRRE",
+      "mail": "MARIOA@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 4,
+      "name": "MARTA",
+      "lastName": "SANCHEZ",
+      "mail": "MARTAS@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 5,
+      "name": "ENZO",
+      "lastName": "FERNANDEZ",
+      "mail": "ENZOF@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 6,
+      "name": "CLARA",
+      "lastName": "AGUERO",
+      "mail": "CLARA@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 7,
+      "name": "ARIEL",
+      "lastName": "FERNANDEZ",
+      "mail": "ARIELF@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 8,
+      "name": "JORGE",
+      "lastName": "CORDOBA",
+      "mail": "JORGEC@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 9,
+      "name": "JUAN",
+      "lastName": "LLAPUR",
+      "mail": "JUANLL@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 10,
+      "name": "CECILIA",
+      "lastName": "CASTRO",
+      "mail": "CECILIAC@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 11,
+      "name": "RAMON",
+      "lastName": "LASTRA",
+      "mail": "RAMONL@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 12,
+      "name": "ILEANA",
+      "lastName": "CHAVEZ",
+      "mail": "ILEANAC@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 13,
+      "name": "CATALINA",
+      "lastName": "ROMANO",
+      "mail": "CATALINAR@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 14,
+      "name": "JORGE",
+      "lastName": "NACHEF",
+      "mail": "JORGEN@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 15,
+      "name": "LUZ",
+      "lastName": "VERGARA",
+      "mail": "LUZV@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 16,
+      "name": "JUAN",
+      "lastName": "MANSO",
+      "mail": "JUANM2@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 17,
+      "name": "ELIAS",
+      "lastName": "SORIA",
+      "mail": "ELIASS@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 18,
+      "name": "MARIELA",
+      "lastName": "RESTON",
+      "mail": "MARIELAR@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
+    },
+    {
+      "id": 19,
+      "name": "ALEJANDRO",
+      "lastName": "VILLARREAL",
+      "mail": "ALEJANDROV@GMAIL.COM",
+      "pass": "123456",
+      "estado": true
     }
   ],
-  "turnos": [
+  "turns": [
     {
       "id": 1,
       "fecha": "2023-03-01",
       "hora": "10:00",
-      "medico": 1,
-      "paciente": "JUAN MANZUR"
+      "medico": {
+        "id": 1,
+        "fullname": "clara rodriguez"
+      },
+      "paciente": {
+        "id": 1,
+        "fullname": "JUAN MANZUR"
+      },
+      "asunto": "Dolor de cabeza.",
+      "status": false
     },
     {
       "id": 2,
       "fecha": "2023-03-02",
       "hora": "14:30",
       "medico": 2,
-      "paciente": "MARTINA JUAREZ"
+      "paciente": "MARTINA JUAREZ",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 2
     },
     {
       "id": 3,
       "fecha": "2023-03-03",
       "hora": "11:15",
       "medico": 3,
-      "paciente": "AGUIRRE MARIO"
+      "paciente": "AGUIRRE MARIO",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 3
     },
     {
       "id": 4,
       "fecha": "2023-02-19",
       "hora": "10:00",
-      "medico": 3,
-      "paciente": "AGUIRRE MARIO"
+      "medico": 4,
+      "paciente": "AGUIRRE MARIO",
+      "asunto": "Dolor de cabeza.",
+      "status": true,
+      "pacienteid": 3
     },
     {
       "id": 5,
       "fecha": "2023-02-19",
       "hora": "11:00",
       "medico": 4,
-      "paciente": "MARTA SANCHEZ"
+      "paciente": "MARTA SANCHEZ",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 4
     },
     {
       "id": 6,
       "fecha": "2023-02-19",
       "hora": "12:00",
       "medico": 3,
-      "paciente": "MARIO LEITO"
+      "paciente": "CLARA AGUERO",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 6
     },
     {
       "id": 7,
       "fecha": "2023-02-19",
       "hora": "16:00",
       "medico": 2,
-      "paciente": "JUAN MANZUR"
+      "paciente": "JUAN MANZUR",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 1
     },
     {
       "id": 8,
       "fecha": "2023-02-19",
       "hora": "17:00",
       "medico": 5,
-      "paciente": "MARTINA JUAREZ"
+      "paciente": "MARTINA JUAREZ",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 2
     },
     {
       "id": 9,
       "fecha": "2023-02-18",
       "hora": "8:00",
       "medico": 3,
-      "paciente": "ENZO FERNANDEZ"
+      "paciente": "ENZO FERNANDEZ",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 5
     },
     {
       "id": 10,
       "fecha": "2023-02-18",
       "hora": "9:00",
       "medico": 4,
-      "paciente": "CLARA AGUERO"
+      "paciente": "CLARA AGUERO",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 6
     },
     {
       "id": 11,
       "fecha": "2023-02-18",
       "hora": "10:00",
-      "medico": 3,
-      "paciente": "AGUIRRE MARIO"
+      "medico": 10,
+      "paciente": "AGUIRRE MARIO",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 3
     },
     {
       "id": 12,
       "fecha": "2023-02-18",
       "hora": "11:00",
       "medico": 4,
-      "paciente": "ARIEL FERNANDEZ"
+      "paciente": "ARIEL FERNANDEZ",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 7
     },
     {
       "id": 13,
       "fecha": "2023-02-18",
       "hora": "12:00",
       "medico": 5,
-      "paciente": "JORGE CORDOBA"
+      "paciente": "JORGE CORDOBA",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 8
     },
     {
       "id": 14,
       "fecha": "2023-02-18",
       "hora": "16:00",
       "medico": 3,
-      "paciente": "JUAN LLAPUR"
+      "paciente": "JUAN LLAPUR",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 9
     },
     {
       "id": 15,
       "fecha": "2023-02-18",
       "hora": "17:00",
       "medico": 4,
-      "paciente": "CECILIA CASTRO"
+      "paciente": "CECILIA CASTRO",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 10
     },
     {
       "id": 16,
       "fecha": "2023-02-18",
       "hora": "18:00",
       "medico": 5,
-      "paciente": "RAMON LASTRA"
+      "paciente": "RAMON LASTRA",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 11
     },
     {
       "id": 17,
       "fecha": "2023-02-22",
       "hora": "8:00",
       "medico": 3,
-      "paciente": "ILENA CHAVEZ"
+      "paciente": "ILENA CHAVEZ",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 12
     },
     {
       "id": 18,
       "fecha": "2023-02-22",
       "hora": "9:00",
       "medico": 2,
-      "paciente": "CATALINA ROMANO"
+      "paciente": "CATALINA ROMANO",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 13
     },
     {
       "id": 19,
       "fecha": "2023-02-22",
       "hora": "10:00",
       "medico": 4,
-      "paciente": "JORGE NACHEF"
+      "paciente": "JORGE NACHEF",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 14
     },
     {
       "id": 20,
       "fecha": "2023-02-22",
       "hora": "11:00",
       "medico": 3,
-      "paciente": "LUZ VERGARA"
+      "paciente": "LUZ VERGARA",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 15
     },
     {
       "id": 21,
       "fecha": "2023-02-22",
       "hora": "12:00",
       "medico": 5,
-      "paciente": "JUAN MANSO"
+      "paciente": "JUAN MANSO",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 16
     },
     {
       "id": 22,
       "fecha": "2023-02-22",
       "hora": "16:00",
       "medico": 3,
-      "paciente": "ELIAS SORIA"
+      "paciente": "ELIAS SORIA",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 17
     },
     {
       "id": 23,
       "fecha": "2023-02-22",
       "hora": "17:00",
       "medico": 4,
-      "paciente": "MARIELA RESTON"
+      "paciente": "MARIELA RESTON",
+      "asunto": "Dolor de cabeza.",
+      "status": false,
+      "pacienteid": 18
+    },
+    {
+      "id": 24,
+      "fecha": "2023-02-20",
+      "hora": "10:00",
+      "medico": 12,
+      "paciente": "ALEJANDRO VILLARREAL",
+      "asunto": "Asuntos varios. jajajaj",
+      "status": false,
+      "pacienteid": 19
+    },
+    {
+      "id": 25,
+      "fecha": "2023-02-20",
+      "hora": "10:00",
+      "medico": 3,
+      "paciente": "ALEJANDRO VILLARREAL",
+      "asunto": "Asuntos varios. jajajaj",
+      "status": false,
+      "pacienteid": 19
     }
   ]
 }

@@ -17,34 +17,6 @@ const dataBase = async () => {
 ///////////
 //Constsntes utilizadas
 
-const urlPacientes = "http://localhost:3000/patients";
-const urlTurnos = "http://localhost:3000/turns";
-
-
-
-
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-  'use strict'
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      } else {
-        registrarMedicos();
-        alert("registro exitoso")
-
-      }
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
 
 
 const registrarMedicos = () => {
