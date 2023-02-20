@@ -1,7 +1,7 @@
 //Constantes utilizadas
 const urlTurnos = "http://localhost:3000/turnos";
 
-const idMedico = 4;
+const idMedico = 3;
 const traer = () => {
 
   getTurnosByIdEmployees(idMedico);
@@ -15,9 +15,9 @@ const getTurnosByIdEmployees = async (id) => {
       throw new Error('Error al obtener la lista de médicos');
     }
     const turnos = await response.json();
-    const turnosPorMedico = turnos.filter(m => m.medico === id);
+    //const turnosPorMedico = turnos.filter(m => m.medico === id);
 
-    mostrarTurnos(turnosPorMedico);
+    mostrarTurnos(turnos);
 
   } catch (error) {
     console.error('Error al realizar la solicitud:', error);
@@ -31,7 +31,7 @@ const mostrarTurnos = (datos) => {
   datos.forEach(element => {
     contenido.innerHTML += `
     <tr>
-      <th scope="row">${element.id}</th>
+      <th scope="row">${element.medico}</th>
       <td>${element.fecha}</td>
       <td>${element.hora}</td>
       <td>${element.paciente}</td>
