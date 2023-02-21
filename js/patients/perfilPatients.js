@@ -1,19 +1,10 @@
 //Constantes utilizadas.
-const urlPacientes = "http://localhost:3000/patients";
 const urlTurnos = "http://localhost:3000/turns";
-const urlMedicos = "http://localhost:3000/employees";
 
-//Obtengo la lista de los mmedicos para luego utilizar
-try {
-  const response = await fetch(urlEmployees);
-  if (!response.ok) {
-    throw new Error('Error al obtener la lista de medicos.');
-  }
-  const ListaMedicos = await response.json();
-} catch (error) {
-  console.error('Error al realizar la solicitud:', error);
-}
-
+// const closeSesion= ()=>{
+//   localStorage.removeItem("patientLog");
+//   window.location="../../index.html";
+// }
 
 //agregar cita con el Medico
 const addCita = async () => {
@@ -46,14 +37,14 @@ const addCita = async () => {
 }
 
 //Obtener datos de las citas por paciente
-const getTurnosByIdPatients = async (id) => {
+const getTurnosByIdPatient = async (id) => {
   try {
     const response = await fetch(urlTurnos);
     if (!response.ok) {
       throw new Error('Error al obtener la lista de citas');
     }
     const turnos = await response.json();
-    const turnosPorPaciente = turnos.filter(cita => cita.patientid === id && cita.status === false);
+    const turnosPorPaciente = turnos.filter(cita => cita.paciente.id === id && cita.status === false);
 
     mostrarTurnos(turnosPorPaciente);
 
@@ -72,50 +63,35 @@ const mostrarTurnos = (datos) => {
       <th scope="row" class="text-center">${cita.id}</th>
       <td class="text-center">${cita.fecha}</td>
       <td class="text-center">${cita.hora}</td>
-      <td class="text-center">${cita.paciente}</td>
+      <td class="text-center">${cita.medico.fullname}</td>
       <td class="text-center">${cita.asunto}</td>
       <td scope="col" class="text-center">
-        <button type="button" class="btn btn-success" onclick="citaRealizada(${cita.id})">Realizada</button>
+        <button type="button" class="btn btn-danger">Eliminar Cita</button>
       </td>
     </tr>
      `
   });
 }
 
-//Obtener listas de Especialidades
-//Obtener lista de Medicos por Especialidad
-
-//Obtener lista de medicos
-const getEmployees = async () => {
-  try {
-    const response = await fetch(urlEmployees);
-    if (!response.ok) {
-      throw new Error('Error al obtener la lista de medicos.');
-    }
-    const ListaMedicos = await response.json();
-    return ListaMedicos;
-
-  } catch (error) {
-    console.error('Error al realizar la solicitud:', error);
-  }
-}
-const list =
-  getEmployees()
-    .then((data) => {
-      console.log(data)
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    })
-
-  // then((response) => response.json())
-  //     .then((data) => {
-  //       alert("Solicitud de Registro enviada! por favor aguarde la autorización");
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error:", error);
-  //     })
-
 //Obtener horarios disponibles por medico y fecha
 //Eliminar cita
 
+//Inicio
+//trear datos del localstorage
+var datoPaciente = JSON.parse(localStorage.getItem('patientLog'));
+
+const result = (datoPaciente === null ? true : false);
+//Si no existen datos manda al Login
+if (!result) {
+
+  const idMedico = datoPaciente.id;
+  const contenido = document.querySelector('#patientName');
+  contenido.innerHTML = `Bienvenido Sr. ${datoPaciente.name}`;
+  getTurnosByIdPatient(datoPaciente.id);
+
+} else {
+
+  alert("Debe realizar el login anted de ingresar.");
+  location = ("../../pages/patients/loginPatients.html");
+
+}
