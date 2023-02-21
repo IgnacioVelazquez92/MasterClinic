@@ -17,16 +17,16 @@
         <a href="/index.html">
           <img src="/img/logo.png" class="imgPolaris" alt="Logo polaris">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav d-flex">
             <li class="nav-item">
-              <a class="nav-link text-light fw-bold" aria-current="page" href="#convenio">Pacientes</a>
+              <a class="nav-link text-light fw-bold" aria-current="page" href="#paciente">Pacientes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light fw-bold" href="#servicios">Medicos</a>
+              <a class="nav-link text-light fw-bold" href="#medicoStaff">Medicos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light fw-bold" href="#altas">Altas</a>
@@ -50,8 +50,8 @@
   <main>
     <section id="altas">
       <h2 class="text-center my-4">Solicitudes pendientes</h2>
-      <div class="table-responsive">
-        <table class="table table-hover">
+      <div class="table-responsive" id="divPendientes">
+        <table class="table table-hover my-4">
           <thead>
             <tr>
               <th scope="col" class="text-center">id</th>
@@ -70,7 +70,7 @@
       </div>
     </section>
 
-    <section id="altas">
+    <section id="medicoStaff">
       <h2 class="text-center my-4">Nomina de Medicos Autorizados</h2>
       <div class="table-responsive">
         <table class="table table-hover">
@@ -92,7 +92,6 @@
       </div>
     </section>
   </main>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   <script src="/js/staff/admin.js"></script>
 </body>
