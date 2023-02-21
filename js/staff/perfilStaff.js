@@ -103,19 +103,14 @@ const addTurnosPorMedicoYFecha = async () => {
 
   const horariosParaTurnos = ["08:00", "09:00", "10:00", "11:00", "16:00", "17:00", "18:00", "19:00"];
   let DataParaRegistrar = "";
-  // horariosParaTurnos.forEach((hturnos) => {
-  //   let hora = hturnos;
-  //   DataParaRegistrar = { fecha, hora, medico, asignado, status };
-  //   addData(DataParaRegistrar);
-  // });
   horariosParaTurnos.map(async (hturnos) => {
     let hora = hturnos;
     DataParaRegistrar = { fecha, hora, medico, asignado, status };
-    const resul = await addData(DataParaRegistrar);
+    const resul = await addDataCita(DataParaRegistrar);
   });
 }
 
-const addData = async (data) => {
+const addDataCita = async (data) => {
   try {
     //Agrego datos de la cita
     const postResponse = await fetch(urlTurnos, {
