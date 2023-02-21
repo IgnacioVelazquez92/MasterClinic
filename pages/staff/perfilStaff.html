@@ -93,7 +93,7 @@
     </header>
     <h1 id="staffName">Bienvenido Dr......</h1>
     <main>
-      <section id="altas">
+      <section id="turnosAsignados">
         <h2 class="text-center my-4">Turnos asignados pendientes</h2>
         <div class="table-responsive">
           <table class="table table-hover">
@@ -108,6 +108,23 @@
               </tr>
             </thead>
             <tbody id="tabPendiente">
+              <!-- se rellena con js -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section id="turnosSinAsignar">
+        <h2 class="text-center my-4">Turnos sin asignar</h2>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col" class="text-center">id</th>
+                <th scope="col" class="text-center">Fecha</th>
+                <th scope="col" class="text-center">Hora</th>
+              </tr>
+            </thead>
+            <tbody id="tabSinAsignar">
               <!-- se rellena con js -->
             </tbody>
           </table>

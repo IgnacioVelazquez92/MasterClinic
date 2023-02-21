@@ -295,6 +295,7 @@
         "fullname": "JUAN MANZUR"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -310,21 +311,7 @@
         "fullname": "MARTINA JUAREZ"
       },
       "asunto": "Dolor de cabeza.",
-      "status": false
-    },
-    {
-      "id": 3,
-      "fecha": "2023-03-03",
-      "hora": "11:15",
-      "medico": {
-        "id": 3,
-        "fullname": "YOLANDA RODRIGUEZ"
-      },
-      "paciente": {
-        "id": 3,
-        "fullname": "AGUIRRE MARIO"
-      },
-      "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -340,6 +327,7 @@
         "fullname": "AGUIRRE MARIO"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": true
     },
     {
@@ -355,7 +343,8 @@
         "fullname": "MARTA SANCHEZ"
       },
       "asunto": "Dolor de cabeza.",
-      "status": false
+      "asignado": true,
+      "status": true
     },
     {
       "id": 6,
@@ -370,6 +359,7 @@
         "fullname": "CLARA AGUERO"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -400,6 +390,7 @@
         "fullname": "MARTINA JUAREZ"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -415,6 +406,7 @@
         "fullname": "ENZO FERNANDEZ"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -430,7 +422,8 @@
         "fullname": "CLARA AGUERO"
       },
       "asunto": "Dolor de cabeza.",
-      "status": false
+      "asignado": true,
+      "status": true
     },
     {
       "id": 11,
@@ -445,6 +438,7 @@
         "fullname": "AGUIRRE MARIO"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -460,6 +454,7 @@
         "fullname": "ARIEL FERNANDEZ"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -475,6 +470,7 @@
         "fullname": "JORGE CORDOBA"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -490,6 +486,7 @@
         "fullname": "JUAN LLAPUR"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -505,6 +502,7 @@
         "fullname": "CECILIA CASTRO"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -520,6 +518,7 @@
         "fullname": "RAMON LASTRA"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -535,6 +534,7 @@
         "fullname": "ILENA CHAVEZ"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -550,6 +550,7 @@
         "fullname": "CATALINA ROMANO"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -565,6 +566,7 @@
         "fullname": "JORGE NACHEF"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -580,6 +582,7 @@
         "fullname": "LUZ VERGARA"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -595,6 +598,7 @@
         "fullname": "JUAN MANSO"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -610,6 +614,7 @@
         "fullname": "ELIAS SORIA"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -625,6 +630,7 @@
         "fullname": "MARIELA RESTON"
       },
       "asunto": "Dolor de cabeza.",
+      "asignado": true,
       "status": false
     },
     {
@@ -640,6 +646,7 @@
         "fullname": "ELIAS SORIA"
       },
       "asunto": "Asuntos varios. jajajaj",
+      "asignado": true,
       "status": false
     },
     {
@@ -655,7 +662,96 @@
         "fullname": "ELIAS SORIA"
       },
       "asunto": "Asuntos varios. jajajaj",
+      "asignado": true,
       "status": false
+    },
+    {
+      "fecha": "2023-2-21",
+      "hora": "08:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "asignado": false,
+      "status": false,
+      "id": 26
+    },
+    {
+      "fecha": "2023-2-21",
+      "hora": "11:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "asignado": false,
+      "status": false,
+      "id": 27
+    },
+    {
+      "fecha": "2023-2-21",
+      "hora": "16:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "asignado": false,
+      "status": false,
+      "id": 28
+    },
+    {
+      "fecha": "2023-2-21",
+      "hora": "09:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "asignado": false,
+      "status": false,
+      "id": 29
+    },
+    {
+      "fecha": "2023-2-21",
+      "hora": "17:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "asignado": false,
+      "status": false,
+      "id": 30
+    },
+    {
+      "fecha": "2023-2-21",
+      "hora": "18:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "asignado": false,
+      "status": false,
+      "id": 31
+    },
+    {
+      "fecha": "2023-2-21",
+      "hora": "19:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "asignado": false,
+      "status": false,
+      "id": 32
+    },
+    {
+      "fecha": "2023-2-21",
+      "hora": "10:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "asignado": false,
+      "status": false,
+      "id": 33
     }
   ]
 }
