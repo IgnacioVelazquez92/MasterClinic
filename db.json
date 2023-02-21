@@ -110,22 +110,13 @@
       "authorized": true
     },
     {
-      "name": "OMAR",
+      "name": "OMAR IGNACIO",
       "lastName": "VELAZQUEZ",
       "specialty": "NEUROLOGIA",
       "mail": "IGNACIOV92@GMAIL.COM",
       "pass": "123456",
       "authorized": true,
       "id": 13
-    },
-    {
-      "name": "ALEJANDRO",
-      "lastName": "VILLARREAL",
-      "specialty": "CARDIOLOGIA",
-      "mail": "ALEV@GMAIL.COM",
-      "pass": "123456",
-      "authorized": true,
-      "id": 14
     }
   ],
   "patients": [
