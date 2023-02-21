@@ -1,7 +1,109 @@
 /* fondo formularios */
 
 .fondoForm{
-  background-image: url(/img/clinic.png);
+  background-image: url("/img/clinic.png");
   background-repeat: no-repeat;
-  /* overflow-x: hidden; */
+}
+
+/* Estilos para el index*/
+
+.header{
+  background-image: url("/img/clinicfondo.png");
+  height: 77vh;
+}
+
+.imgLogo{
+  width: 120px;
+}
+
+.card-items:hover{
+  cursor: pointer;
+  opacity: 85%;
+}
+.card-items:nth-child(3n+1){
+  background-color: #0178B0;
+}
+.card-items:nth-child(3n+2){
+  background-color: #019BE3;
+}
+.card-items:nth-child(3n+3){
+  background-color: #03B495;
+}
+@media (min-width: 0px){
+  .card-container{
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+    grid-template-rows: repeat(6,12vh);
+    grid-gap: 10px;
+  }
+  
+  .card-items{
+    display: grid;
+    place-content: start;
+  }
+}
+
+
+@media (min-width: 570px){
+  .card-container{
+    display: grid;
+    grid-template-columns: repeat(2,49%);
+    grid-template-rows: repeat(3,20vh);
+    grid-gap: 10px;
+  }
+  
+  .card-items{
+    display: grid;
+    place-content:center;
+  }
+}
+
+@media (min-width: 768px){
+  .card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 32.5%);
+    grid-template-rows: repeat(2,20vh);
+    grid-gap: 10px;
+  }
+  
+  .card-items{
+    display: grid;
+    place-content: center;
+  }
+}
+
+@media (min-width: 1200px){
+  .card-container{
+    display: grid;
+    grid-template-columns: repeat(6, 16%);
+    grid-template-rows: repeat(1,20vh);
+    grid-gap: 10px;
+  }
+  
+  .card-items{
+    display: grid;
+    place-content: center;
+  }
+}
+
+
+.span-14{
+  background-color: #0178B0;
+}
+
+.span-25{
+  background-color: #019BE3;
+}
+
+.span-36{
+  background-color: #03B495;
+}
+
+
+
+/* cartilla */
+
+.header-cartilla{
+  background-image: url("/img/clinicfondo.png");
+
 }
