@@ -1,37 +1,33 @@
 //Constantes utilizadas
-const urlEmployees = "http://localhost:3000/employees";
+const urlPatients = "http://localhost:3000/patients";
 
-const logEmployees = () => {
+const logPatients = () => {
 
   //Cargos la data de form a las variables
   const mail = document.getElementById("correo").value.toUpperCase();
   const pass = document.getElementById("password").value;
   //creo la estructura de datos que validare y se la paso a la función
-  const logMedico = { mail, pass };
-  loginMedico(logMedico);
+  const logPatient = { mail, pass };
+  loginPaciente(logPatient);
 }
 
-const loginMedico = async (logMedico) => {
+const loginPaciente = async (logPatient) => {
   try {
-    const response = await fetch(urlEmployees);
+    const response = await fetch(urlPatients);
     if (!response.ok) {
       alert('Error al obtener la lista de médicos')
       throw new Error('Error al obtener la lista de médicos');
     }
-    const medicos = await response.json();
+    const patients = await response.json();
 
-    let resultado = medicos.filter((medico => medico.mail === logMedico.mail && medico.pass === logMedico.pass))
+    let resultado = patients.filter((paciente => paciente.mail === logPatient.mail && paciente.pass === logPatient.pass))
     if (resultado.length > 0) {
-      if (resultado[0].authorized) {
-        let logStaff = resultado[0]
-        delete logStaff.pass;
-        window.localStorage.setItem("staffLog", JSON.stringify(logStaff));
-        //redirige de acuerdo si es medico o administrador
-        if (resultado[0].isAdmin) {
-          window.location = ("../../pages/staff/perfilAdmin.html")
-        } else {
-          window.location = ("../../pages/staff/perfilStaff.html")
-        }
+      if (resultado[0].estado) {
+        let logPatient = resultado[0]
+        delete logPatient.pass;
+        window.localStorage.setItem("patientLog", JSON.stringify(logPatient));
+        //redirige de a Perfil Paciente
+        window.location = ("../../pages/patients/perfilPatients.html")
       } else {
         alert("Su usuario esta siendo evaluado por el administrador")
       }
@@ -58,7 +54,7 @@ const loginMedico = async (logMedico) => {
       if (!form.checkValidity()) {
         event.stopPropagation()
       } else {
-        logEmployees();
+        logPatients();
       }
 
       form.classList.add('was-validated')

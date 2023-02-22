@@ -2,24 +2,23 @@
 const urlTurnos = "http://localhost:3000/turns";
 
 
-// const closeSesion= ()=>{
-//   localStorage.removeItem("patientLog");
-//   window.location="../../index.html";
-// }
 
-//Obtener datos de las citas por paciente
-const getTurnosByIdPatient = async (id) => {
+
+
+//Obtener horarios disponibles por medico
+const getllaibles = async (id) => {
+
+  const urlTurnsDisp = `${urlTurnos}/?medico.id=${id}&asigando=false`
+
   try {
-    const urlEdit = `${urlTurnos}/?asignado=true`;
-    const response = await fetch(urlEdit);
+    const response = await fetch(urlTurnos);
     if (!response.ok) {
       throw new Error('Error al obtener la lista de citas');
     }
     const turnos = await response.json();
-    //console.log(turnos)
-    const turnosPorPaciente = turnos.filter((cita) => cita.paciente.id === id);
+    //const turnosPorPaciente = turnos.filter(cita => cita.paciente.id === id && cita.status === false);
 
-    mostrarTurnos(turnosPorPaciente);
+    mostrarTurnos(turnosDisponiblesPorMedico);
 
   } catch (error) {
     console.error('Error al realizar la solicitud:', error);
@@ -38,28 +37,12 @@ const mostrarTurnos = (datos) => {
       <td class="text-center">${cita.fecha}</td>
       <td class="text-center">${cita.hora}</td>
       <td class="text-center">${cita.medico.fullname}</td>
-      <td class="text-center">${cita.asunto}</td>
       <td scope="col" class="text-center">
-        <button type="button" class="btn btn-danger my-1" onclick="eliminarCita(${cita.id})">Eliminar</button>
+        <button type="button" class="btn btn-success  my-1" onclick="addCita(${cita.id})">Solicitar turnoS</button>
       </td>
     </tr>
      `
   });
-}
-
-//Eliminar cita por Id
-const eliminarCita = async (id) => {
-  try {
-    const urlEdit = `${urlTurnos}/${id}`
-    const response = await fetch(urlEdit, {
-      method: "DELETE",
-    });
-    if (!response.ok) {
-      throw new Error('Error al eliminar la cita.');
-    }
-  } catch (error) {
-    console.error('Error al realizar la solicitud:', error);
-  }
 }
 
 //Inicio
@@ -72,7 +55,7 @@ if (!result) {
 
   const contenido = document.querySelector('#patientName');
   contenido.innerHTML = `Bienvenido Sr. ${datoPaciente.name}`;
-  getTurnosByIdPatient(datoPaciente.id);
+  (datoPaciente.id);
 
 } else {
 
