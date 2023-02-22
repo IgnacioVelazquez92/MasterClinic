@@ -126,6 +126,15 @@
       "pass": "123456",
       "authorized": true,
       "id": 14
+    },
+    {
+      "name": "JORGE",
+      "lastName": "LAZARTE",
+      "specialty": "CARDIOLOGIA",
+      "mail": "JORGE@GMAIL.COM",
+      "pass": "123456",
+      "authorized": true,
+      "id": 15
     }
   ],
   "patients": [
