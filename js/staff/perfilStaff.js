@@ -140,12 +140,10 @@ const result = (datoMedico === null ? true : false);
 if (!result) {
 
   const contenido = document.querySelector('#staffName');
-  contenido.innerHTML = `Bienvenido Dr. ${datoMedico.name}`;
+  contenido.innerHTML = `Bienvenido Dr./Dra.  ${datoMedico.name} ${datoMedico.lastName}`;
   getTurnosByIdEmployees(datoMedico.id);
 
 } else {
-
-  alert("Debe realizar el login anted de ingresar.");
   location = ("../../pages/staff/loginStaff.html");
 
 }

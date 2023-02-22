@@ -297,6 +297,14 @@
       "pass": "123456",
       "estado": true,
       "id": 20
+    },
+    {
+      "name": "OMAR",
+      "lastName": "VELAZQUEZ",
+      "mail": "IGNACIOV92@GMAIL.COM",
+      "pass": "123456",
+      "estado": true,
+      "id": 21
     }
   ],
   "turns": [

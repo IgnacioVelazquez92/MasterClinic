@@ -1,12 +1,12 @@
-// if (!localStorage.getItem("staffLog")) {
-//   window.location= "../../pages/staff/loginStaff.html";
-// }
+if (!localStorage.getItem("staffLog")) {
+  window.location= "../../pages/staff/loginStaff.html";
+}
 
 
-// const closeSesion= ()=>{
-//   localStorage.removeItem("staffLog");
-//   window.location="../../index.html";
-// }
+const closeSesion= ()=>{
+  localStorage.removeItem("staffLog");
+  window.location="../../index.html";
+}
 
 const urlEmployees = "http://localhost:3000/employees";
 const urlPatients = "http://localhost:3000/patients";
@@ -152,9 +152,9 @@ const modificarStaff = async (id) => {
     .catch((err) => console.error(err));
 }
 
-// const eliminarStaff = (id)=>{
-//   const urlEdit= `http://localhost:3000/employees/${id}`
-//   fetch(urlEdit, {
-//     method: "DELETE",
-//   })
-// }
+const eliminarStaff = (id)=>{
+  const urlEdit= `http://localhost:3000/employees/${id}`
+  fetch(urlEdit, {
+    method: "DELETE",
+  })
+}
