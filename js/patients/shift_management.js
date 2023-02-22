@@ -1,6 +1,10 @@
 //Constantes utilizadas.
 const urlTurnos = "http://localhost:3000/turns";
 
+
+
+
+
 //Obtener horarios disponibles por medico
 const getllaibles = async (id) => {
 
