@@ -114,7 +114,7 @@ const imprimirStaff = async () => {
       <button type="button" class="btn btn-danger my-1" onclick="eliminarStaff(${medico.id})">Eliminar</button>
     </th>
   </tr>
-za    `
+`
   })
 }
 imprimirStaff()

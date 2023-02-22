@@ -119,15 +119,6 @@
       "id": 13
     },
     {
-      "name": "OMAR",
-      "lastName": "VELAZQUEZ",
-      "specialty": "CARDIOLOGIA",
-      "mail": "IGNACIO@GMAIL.COM",
-      "pass": "123456",
-      "authorized": true,
-      "id": 14
-    },
-    {
       "name": "JORGE",
       "lastName": "LAZARTE",
       "specialty": "CARDIOLOGIA",
@@ -135,6 +126,15 @@
       "pass": "123456",
       "authorized": true,
       "id": 15
+    },
+    {
+      "name": "OMAR",
+      "lastName": "VELAZQUEZ",
+      "specialty": "CARDIOLOGIA",
+      "mail": "IGNACI@GMAIL.COM",
+      "pass": "123456",
+      "authorized": false,
+      "id": 16
     }
   ],
   "patients": [

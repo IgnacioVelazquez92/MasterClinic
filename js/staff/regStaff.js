@@ -30,6 +30,7 @@ dBase=dataBase();
       }else {
         let logueado=registrarMedicos();
         if (logueado) {
+          alert("Solicitud de Registro enviada! por favor aguarde la autorización");
           window.location=("../../pages/staff/loginStaff.html");
         }
       }
@@ -62,7 +63,7 @@ const registrarMedicos = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        alert("Solicitud de Registro enviada! por favor aguarde la autorización");
+        console.log("exitoso");
       })
       .catch((error) => {
         console.error("Error:", error);
