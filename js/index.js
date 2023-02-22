@@ -16,8 +16,7 @@ const staffActivo= async()=>{
 const imprimirStaff =async ()=>{
   let medicos = document.getElementById("tabMedicos");
   dataBase = await staffActivo();
-  medicos.innerHTML=`        
-  <thead>
+  medicos.innerHTML=`<thead>
   <tr>
     <th scope="col" class="text-center">Nombre y Apellido</th>
     <th scope="col" class="text-center">Especialidad</th>
