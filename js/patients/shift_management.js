@@ -55,20 +55,16 @@ const registrarCitaMedica = async () => {
   //Datos del medico
 
   let id = document.getElementById('medicoSelect').value; //id del Medico
-  let fullname = document.getElementById(id);
-  let fn = fullname.getAttribute("fullname");
-  console.log(fn);
-  //datoMedico.name + " " + datoMedico.lastName; //Nombre completo medico
-  //const fullname = fn.fullname;
+  let fullname = document.getElementById(id).getAttribute("fullname");
   const medico = { id, fullname };
 
   //Datos del paciente paciente
   id = datoPaciente.id; //idpaciente
   fullname = datoPaciente.name + " " + datoPaciente.lastName; //Nombre completo paciente
   const paciente = { id, fullname };
-  const DataCita = { fecha, hora, asunto, medico, paciente, status };
-  console.log(DataCita)
-  //addDataCita(DataCita);
+  const DataCita = { fecha, hora, asunto, medico, paciente, status, asignado };
+  //console.log(DataCita)
+  addDataCita(DataCita);
 }
 
 //Grabo la cita en Turns
@@ -116,7 +112,7 @@ const mostrarMedicosForm = (datos) => {
   contenido.innerHTML = '<option selected disabled value="">Seleccione el Médico</option>'
   datos.forEach(dataMedic => {
     contenido.innerHTML += `
-      <option value="${dataMedic.id}" fullName="${dataMedic.name} ${dataMedic.lastName}">${dataMedic.name} ${dataMedic.lastName}</option>
+      <option id="${dataMedic.id}" value="${dataMedic.id}" fullName="${dataMedic.name} ${dataMedic.lastName}">${dataMedic.name} ${dataMedic.lastName}</option>
      `
   });
 }
@@ -124,8 +120,9 @@ const mostrarMedicosForm = (datos) => {
 const verTurnosDisp = async () => {
 
   //tomar la fecha y buscar los turnos disponibles
-  // console.log(document.getElementById("inputFecha").value);
-  const tDisp = await getTurnosDisponibles();
+  const idMed = document.getElementById('medicoSelect').value;
+  const dFecha = document.getElementById('inputFecha').value;;
+  const tDisp = await getTurnosDisponibles(idMed, dFecha);
   // Mostrar los turnos en un select
   const contTDisp = document.getElementById('turnoSelect');
   contTDisp.innerHTML = '<option selected disabled value="">Seleccione el turno</option>'

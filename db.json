@@ -778,6 +778,38 @@
       "asignado": false,
       "status": false,
       "id": 33
+    },
+    {
+      "fecha": "2023-02-23",
+      "hora": "19:00",
+      "asunto": "motivo 19",
+      "medico": {
+        "id": "12",
+        "fullname": "EDUARDO COMOTTI"
+      },
+      "paciente": {
+        "id": 3,
+        "fullname": "MARIO AGUIRRE"
+      },
+      "status": false,
+      "asignado": true,
+      "id": 34
+    },
+    {
+      "fecha": "2023-02-23",
+      "hora": "18:00",
+      "asunto": "ssss",
+      "medico": {
+        "id": "12",
+        "fullname": "EDUARDO COMOTTI"
+      },
+      "paciente": {
+        "id": 3,
+        "fullname": "MARIO AGUIRRE"
+      },
+      "status": false,
+      "asignado": true,
+      "id": 35
     }
   ]
 }
