@@ -289,6 +289,14 @@
       "mail": "ALEJANDROV@GMAIL.COM",
       "pass": "123456",
       "estado": true
+    },
+    {
+      "name": "MARIO",
+      "lastName": "TORRES",
+      "mail": "MARIOT@GMAIL.COM",
+      "pass": "123456",
+      "estado": true,
+      "id": 20
     }
   ],
   "turns": [
@@ -297,8 +305,88 @@
       "fecha": "2023-03-01",
       "hora": "10:00",
       "medico": {
+        "id": 2,
+        "fullname": "JORGE SUAREZ"
+      },
+      "paciente": {
         "id": 1,
-        "fullname": "clara rodriguez"
+        "fullname": "JUAN MANZUR"
+      },
+      "asunto": "Dolor de cabeza.",
+      "asignado": true,
+      "status": false
+    },
+    {
+      "id": 2,
+      "fecha": "2023-03-02",
+      "hora": "14:30",
+      "medico": {
+        "id": 2,
+        "fullname": "JORGE SUAREZ"
+      },
+      "paciente": {
+        "id": 2,
+        "fullname": "MARTINA JUAREZ"
+      },
+      "asunto": "Dolor de cabeza.",
+      "asignado": true,
+      "status": false
+    },
+    {
+      "id": 4,
+      "fecha": "2023-02-19",
+      "hora": "10:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "paciente": {
+        "id": 3,
+        "fullname": "AGUIRRE MARIO"
+      },
+      "asunto": "Dolor de cabeza.",
+      "asignado": true,
+      "status": true
+    },
+    {
+      "id": 5,
+      "fecha": "2023-02-19",
+      "hora": "11:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "paciente": {
+        "id": 4,
+        "fullname": "MARTA SANCHEZ"
+      },
+      "asunto": "Dolor de cabeza.",
+      "asignado": true,
+      "status": true
+    },
+    {
+      "id": 6,
+      "fecha": "2023-02-19",
+      "hora": "12:00",
+      "medico": {
+        "id": 3,
+        "fullname": "YOLANDA RODRIGUEZ"
+      },
+      "paciente": {
+        "id": 6,
+        "fullname": "CLARA AGUERO"
+      },
+      "asunto": "Dolor de cabeza.",
+      "asignado": true,
+      "status": false
+    },
+    {
+      "id": 7,
+      "fecha": "2023-02-19",
+      "hora": "16:00",
+      "medico": {
+        "id": 2,
+        "fullname": "JORGE SUAREZ"
       },
       "paciente": {
         "id": 1,
@@ -308,244 +396,380 @@
       "status": false
     },
     {
-      "id": 2,
-      "fecha": "2023-03-02",
-      "hora": "14:30",
-      "medico": 2,
-      "paciente": "MARTINA JUAREZ",
-      "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 2
-    },
-    {
-      "id": 3,
-      "fecha": "2023-03-03",
-      "hora": "11:15",
-      "medico": 3,
-      "paciente": "AGUIRRE MARIO",
-      "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 3
-    },
-    {
-      "id": 4,
-      "fecha": "2023-02-19",
-      "hora": "10:00",
-      "medico": 4,
-      "paciente": "AGUIRRE MARIO",
-      "asunto": "Dolor de cabeza.",
-      "status": true,
-      "pacienteid": 3
-    },
-    {
-      "id": 5,
-      "fecha": "2023-02-19",
-      "hora": "11:00",
-      "medico": 4,
-      "paciente": "MARTA SANCHEZ",
-      "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 4
-    },
-    {
-      "id": 6,
-      "fecha": "2023-02-19",
-      "hora": "12:00",
-      "medico": 3,
-      "paciente": "CLARA AGUERO",
-      "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 6
-    },
-    {
-      "id": 7,
-      "fecha": "2023-02-19",
-      "hora": "16:00",
-      "medico": 2,
-      "paciente": "JUAN MANZUR",
-      "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 1
-    },
-    {
       "id": 8,
       "fecha": "2023-02-19",
       "hora": "17:00",
-      "medico": 5,
-      "paciente": "MARTINA JUAREZ",
+      "medico": {
+        "id": 5,
+        "fullname": "PABLO.MARENGO"
+      },
+      "paciente": {
+        "id": 2,
+        "fullname": "MARTINA JUAREZ"
+      },
       "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 2
+      "asignado": true,
+      "status": false
     },
     {
       "id": 9,
       "fecha": "2023-02-18",
       "hora": "8:00",
-      "medico": 3,
-      "paciente": "ENZO FERNANDEZ",
+      "medico": {
+        "id": 3,
+        "fullname": "YOLANDA RODRIGUEZ"
+      },
+      "paciente": {
+        "id": 5,
+        "fullname": "ENZO FERNANDEZ"
+      },
       "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 5
+      "asignado": true,
+      "status": false
     },
     {
       "id": 10,
       "fecha": "2023-02-18",
       "hora": "9:00",
-      "medico": 4,
-      "paciente": "CLARA AGUERO",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "paciente": {
+        "id": 6,
+        "fullname": "CLARA AGUERO"
+      },
       "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 6
+      "asignado": true,
+      "status": true
     },
     {
       "id": 11,
       "fecha": "2023-02-18",
       "hora": "10:00",
-      "medico": 10,
-      "paciente": "AGUIRRE MARIO",
+      "medico": {
+        "id": 10,
+        "fullname": "CRISTINA MEDINA"
+      },
+      "paciente": {
+        "id": 3,
+        "fullname": "AGUIRRE MARIO"
+      },
       "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 3
+      "asignado": true,
+      "status": false
     },
     {
       "id": 12,
       "fecha": "2023-02-18",
       "hora": "11:00",
-      "medico": 4,
-      "paciente": "ARIEL FERNANDEZ",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "paciente": {
+        "id": 7,
+        "fullname": "ARIEL FERNANDEZ"
+      },
       "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 7
+      "asignado": true,
+      "status": false
     },
     {
       "id": 13,
       "fecha": "2023-02-18",
       "hora": "12:00",
-      "medico": 5,
-      "paciente": "JORGE CORDOBA",
+      "medico": {
+        "id": 5,
+        "fullname": "PABLO.MARENGO"
+      },
+      "paciente": {
+        "id": 8,
+        "fullname": "JORGE CORDOBA"
+      },
       "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 8
+      "asignado": true,
+      "status": false
     },
     {
       "id": 14,
       "fecha": "2023-02-18",
       "hora": "16:00",
-      "medico": 3,
-      "paciente": "JUAN LLAPUR",
+      "medico": {
+        "id": 3,
+        "fullname": "YOLANDA RODRIGUEZ"
+      },
+      "paciente": {
+        "id": 9,
+        "fullname": "JUAN LLAPUR"
+      },
       "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 9
+      "asignado": true,
+      "status": false
     },
     {
       "id": 15,
       "fecha": "2023-02-18",
       "hora": "17:00",
-      "medico": 4,
-      "paciente": "CECILIA CASTRO",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "paciente": {
+        "id": 10,
+        "fullname": "CECILIA CASTRO"
+      },
       "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 10
+      "asignado": true,
+      "status": false
     },
     {
       "id": 16,
       "fecha": "2023-02-18",
       "hora": "18:00",
-      "medico": 5,
-      "paciente": "RAMON LASTRA",
+      "medico": {
+        "id": 5,
+        "fullname": "PABLO.MARENGO"
+      },
+      "paciente": {
+        "id": 11,
+        "fullname": "RAMON LASTRA"
+      },
       "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 11
+      "asignado": true,
+      "status": false
     },
     {
       "id": 17,
       "fecha": "2023-02-22",
       "hora": "8:00",
-      "medico": 3,
-      "paciente": "ILENA CHAVEZ",
+      "medico": {
+        "id": 3,
+        "fullname": "YOLANDA RODRIGUEZ"
+      },
+      "paciente": {
+        "id": 12,
+        "fullname": "ILENA CHAVEZ"
+      },
       "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 12
+      "asignado": true,
+      "status": false
     },
     {
       "id": 18,
       "fecha": "2023-02-22",
       "hora": "9:00",
-      "medico": 2,
-      "paciente": "CATALINA ROMANO",
+      "medico": {
+        "id": 2,
+        "fullname": "JORGE.SUAREZ"
+      },
+      "paciente": {
+        "id": 13,
+        "fullname": "CATALINA ROMANO"
+      },
       "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 13
+      "asignado": true,
+      "status": false
     },
     {
       "id": 19,
       "fecha": "2023-02-22",
       "hora": "10:00",
-      "medico": 4,
-      "paciente": "JORGE NACHEF",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "paciente": {
+        "id": 14,
+        "fullname": "JORGE NACHEF"
+      },
       "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 14
+      "asignado": true,
+      "status": false
     },
     {
       "id": 20,
       "fecha": "2023-02-22",
       "hora": "11:00",
-      "medico": 3,
-      "paciente": "LUZ VERGARA",
+      "medico": {
+        "id": 3,
+        "fullname": "YOLANDA RODRIGUEZ"
+      },
+      "paciente": {
+        "id": 15,
+        "fullname": "LUZ VERGARA"
+      },
       "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 15
+      "asignado": true,
+      "status": false
     },
     {
       "id": 21,
       "fecha": "2023-02-22",
       "hora": "12:00",
-      "medico": 5,
-      "paciente": "JUAN MANSO",
+      "medico": {
+        "id": 5,
+        "fullname": "PABLO.MARENGO"
+      },
+      "paciente": {
+        "id": 16,
+        "fullname": "JUAN MANSO"
+      },
       "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 16
+      "asignado": true,
+      "status": false
     },
     {
       "id": 22,
       "fecha": "2023-02-22",
       "hora": "16:00",
-      "medico": 3,
-      "paciente": "ELIAS SORIA",
+      "medico": {
+        "id": 3,
+        "fullname": "YOLANDA RODRIGUEZ"
+      },
+      "paciente": {
+        "id": 17,
+        "fullname": "ELIAS SORIA"
+      },
       "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 17
+      "asignado": true,
+      "status": false
     },
     {
       "id": 23,
       "fecha": "2023-02-22",
       "hora": "17:00",
-      "medico": 4,
-      "paciente": "MARIELA RESTON",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "paciente": {
+        "id": 18,
+        "fullname": "MARIELA RESTON"
+      },
       "asunto": "Dolor de cabeza.",
-      "status": false,
-      "pacienteid": 18
+      "asignado": true,
+      "status": false
     },
     {
       "id": 24,
       "fecha": "2023-02-20",
       "hora": "10:00",
-      "medico": 12,
-      "paciente": "ALEJANDRO VILLARREAL",
+      "medico": {
+        "id": 12,
+        "fullname": "EDUARDO COMOTTI"
+      },
+      "paciente": {
+        "id": 17,
+        "fullname": "ELIAS SORIA"
+      },
       "asunto": "Asuntos varios. jajajaj",
-      "status": false,
-      "pacienteid": 19
+      "asignado": true,
+      "status": false
     },
     {
       "id": 25,
       "fecha": "2023-02-20",
       "hora": "10:00",
-      "medico": 3,
-      "paciente": "ALEJANDRO VILLARREAL",
+      "medico": {
+        "id": 3,
+        "fullname": "YOLANDA RODRIGUEZ"
+      },
+      "paciente": {
+        "id": 17,
+        "fullname": "ELIAS SORIA"
+      },
       "asunto": "Asuntos varios. jajajaj",
+      "asignado": true,
+      "status": false
+    },
+    {
+      "fecha": "2023-2-21",
+      "hora": "08:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "asignado": false,
       "status": false,
-      "pacienteid": 19
+      "id": 26
+    },
+    {
+      "fecha": "2023-2-21",
+      "hora": "11:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "asignado": false,
+      "status": false,
+      "id": 27
+    },
+    {
+      "fecha": "2023-2-21",
+      "hora": "16:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "asignado": false,
+      "status": false,
+      "id": 28
+    },
+    {
+      "fecha": "2023-2-21",
+      "hora": "09:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "asignado": false,
+      "status": false,
+      "id": 29
+    },
+    {
+      "fecha": "2023-2-21",
+      "hora": "17:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "asignado": false,
+      "status": false,
+      "id": 30
+    },
+    {
+      "fecha": "2023-2-21",
+      "hora": "18:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "asignado": false,
+      "status": false,
+      "id": 31
+    },
+    {
+      "fecha": "2023-2-21",
+      "hora": "19:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "asignado": false,
+      "status": false,
+      "id": 32
+    },
+    {
+      "fecha": "2023-2-21",
+      "hora": "10:00",
+      "medico": {
+        "id": 4,
+        "fullname": "DANIELA LIONETTI"
+      },
+      "asignado": false,
+      "status": false,
+      "id": 33
     }
   ]
 }

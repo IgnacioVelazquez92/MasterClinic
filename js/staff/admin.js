@@ -9,28 +9,28 @@
 // }
 
 const urlEmployees = "http://localhost:3000/employees";
-const urlPatients="http://localhost:3000/patients";
+const urlPatients = "http://localhost:3000/patients";
 
 // Funcion para obtener las solicitudes de alta
-const postulantes= async()=>{
-  
-  await fetch("http://localhost:3000/employees?authorized_ne=true",{
-    method:"GET"
+const postulantes = async () => {
+
+  await fetch("http://localhost:3000/employees?authorized_ne=true", {
+    method: "GET"
   })
-  .then((r)=>r.json())
-  .then((resp)=>dBase=resp)
-  .catch((error)=>console.error(error))
+    .then((r) => r.json())
+    .then((resp) => dBase = resp)
+    .catch((error) => console.error(error))
   return dBase
 }
 
 
 //imprimir en pantalla los pendientes
-const imprimirPostulantes =async ()=>{
+const imprimirPostulantes = async () => {
   let pendientes = document.getElementById("tabPendiente");
   dataBase = await postulantes();
   if (!(Object.entries(dataBase).length === 0)) {
-    dataBase.map((solicitante)=>{
-      pendientes.innerHTML+=`            
+    dataBase.map((solicitante) => {
+      pendientes.innerHTML += `            
       <tr>
       <th scope="row">${solicitante.id}</th>
       <td class="text-center">${solicitante.name}</td>
@@ -43,32 +43,32 @@ const imprimirPostulantes =async ()=>{
       </th>
     </tr>
     `
-  })
-    
+    })
+
   } else {
-    document.getElementById("divPendientes").innerHTML=`<h4 class="text-center m-2 ">Estas al día, no hay solicitudes por procesar.. ✅</h4>`
+    document.getElementById("divPendientes").innerHTML = `<h4 class="text-center m-2 ">Estas al día, no hay solicitudes por procesar.. ✅</h4>`
   }
 }
 imprimirPostulantes()
 
-const staffActivo= async()=>{
-  
-  await fetch("http://localhost:3000/employees?authorized_ne=false",{
-    method:"GET"
+const staffActivo = async () => {
+
+  await fetch("http://localhost:3000/employees?authorized_ne=false", {
+    method: "GET"
   })
-  .then((r)=>r.json())
-  .then((resp)=>dBase=resp)
-  .catch((error)=>console.error(error))
+    .then((r) => r.json())
+    .then((resp) => dBase = resp)
+    .catch((error) => console.error(error))
   return dBase
 }
 
 
 //imprimir en pantalla los pendientes
-const imprimirStaff =async ()=>{
+const imprimirStaff = async () => {
   let medicos = document.getElementById("tabMedicos");
   dataBase = await staffActivo();
-  dataBase.map((medico)=>{
-    medicos.innerHTML+=`            
+  dataBase.map((medico) => {
+    medicos.innerHTML += `            
     <tr>
     <th scope="row">${medico.id}</th>
     <td class="text-center">${medico.name}</td>
@@ -114,15 +114,15 @@ const imprimirStaff =async ()=>{
       <button type="button" class="btn btn-danger my-1" onclick="eliminarStaff(${medico.id})">Eliminar</button>
     </th>
   </tr>
-  `
-})
+za    `
+  })
 }
 imprimirStaff()
 
-const validar = (id)=>{
-  const urlEdit= `http://localhost:3000/employees/${id}`
-  const authorized=true;
-  const data={authorized};
+const validar = (id) => {
+  const urlEdit = `http://localhost:3000/employees/${id}`
+  const authorized = true;
+  const data = { authorized };
   fetch(urlEdit, {
     method: "PATCH",
     body: JSON.stringify(data),
@@ -132,12 +132,12 @@ const validar = (id)=>{
   })
     .then((response) => response.json())
     .then((json) => console.log(json))
-    .catch((err)=>console.error(err));
+    .catch((err) => console.error(err));
 }
 
 
-const modificarStaff = async(id)=>{
-  const urlEdit= `http://localhost:3000/employees/${id}`
+const modificarStaff = async (id) => {
+  const urlEdit = `http://localhost:3000/employees/${id}`
 
 
   await fetch(urlEdit, {
@@ -149,7 +149,7 @@ const modificarStaff = async(id)=>{
   })
     .then((response) => response.json())
     .then((json) => console.log(json))
-    .catch((err)=>console.error(err));
+    .catch((err) => console.error(err));
 }
 
 // const eliminarStaff = (id)=>{
