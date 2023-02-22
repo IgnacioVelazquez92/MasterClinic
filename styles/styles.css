@@ -107,3 +107,74 @@
   background-image: url("/img/clinicfondo.png");
 
 }
+
+/* Quienes somos */
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+#contenedor{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#titulo{
+  text-align: center;
+  padding: 10px;
+  font-size: 70px;
+}
+
+#descripcion{
+  text-align: center;
+  padding: 5px 25px;
+  font-size: 25px;
+}
+
+.cardsection{
+  width: 100%;
+  display: flex;
+  gap: 200px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card__perfil{
+  width: 320px;
+  padding: 20px;
+  box-shadow: 1px 1px grey;
+  border: solid rgb(229, 229, 236) 2px;
+}
+
+.card__perfil:hover{
+  border: solid #0178B0 2px;
+} 
+
+.card__perfil:hover .imagen{
+  transform: rotate(0);
+}
+
+.imagen{
+  width: 140px;
+  border-radius: 70px;
+  box-shadow: 2px 2px 5px black;
+  transform: rotate(-10deg);
+  transition: all .3s;
+}
+
+.card__nombre{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+hr{
+  width: 100%;
+  background-color: grey;
+  margin: 20px 5px;
+}
+
+
